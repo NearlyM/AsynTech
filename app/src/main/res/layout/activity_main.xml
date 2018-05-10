@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="hander"
+            type="com.nel.asyn.EventHandler"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_is"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="IntentService"
+            android:onClick="@{hander::onClickIS}"/>
+
+        <Button
+            android:id="@+id/btn_asyn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="AsynTask"
+            android:onClick="@{hander::onClickAsyn}"/>
+
+        <Button
+            android:id="@+id/btn_tp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Thread Pool" />
+        <Button
+            android:id="@+id/btn_ht"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="HanderThread" />
+    </LinearLayout>
+</layout>
