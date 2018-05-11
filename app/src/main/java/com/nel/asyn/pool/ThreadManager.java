@@ -1,5 +1,7 @@
 package com.nel.asyn.pool;
 
+import com.nel.asyn.is.TestThreadFactory;
+
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -25,7 +27,8 @@ public class ThreadManager {
                 MAX_NUM,
                 1000,
                 TimeUnit.MILLISECONDS,
-                mWorkQueue);
+                mWorkQueue,
+                new TestThreadFactory());
     }
 
     public void put(Runnable runnable) {
